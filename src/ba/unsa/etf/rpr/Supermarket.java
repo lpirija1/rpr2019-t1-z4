@@ -15,30 +15,12 @@ public class Supermarket {
         return artikli;
     }
 
-    public void setArtikli(Artikl[] artikli) {
-        this.artikli = artikli;
-    }
-
-    public int getKapacitet() {
-        return kapacitet;
-    }
-
-    public void setKapacitet(int kapacitet) {
-        this.kapacitet = kapacitet;
-    }
-
-    public int getBr_artikala() {
-        return br_artikala;
-    }
-
-    public void setBr_artikala(int br_artikala) {
-        this.br_artikala = br_artikala;
-    }
-
     public void dodajArtikl(Artikl a) {
         for(int i=0; i<kapacitet; i++){
-            if(artikli[i]==null) artikli[i]=a;
-            break;
+            if(artikli[i]==null) {
+                artikli[i] = a;
+                break;
+            }
         }
         br_artikala++;
     }
