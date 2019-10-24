@@ -15,6 +15,26 @@ public class Korpa {
         return artikli;
     }
 
+    public void setArtikli(Artikl[] artikli) {
+        this.artikli = artikli;
+    }
+
+    public int getKapacitet() {
+        return kapacitet;
+    }
+
+    public void setKapacitet(int kapacitet) {
+        this.kapacitet = kapacitet;
+    }
+
+    public int getBr_artikala() {
+        return br_artikala;
+    }
+
+    public void setBr_artikala(int br_artikala) {
+        this.br_artikala = br_artikala;
+    }
+
     public boolean dodajArtikl(Artikl a) {
         if(br_artikala==kapacitet) return false;
         for(int i=0; i<kapacitet; i++){
